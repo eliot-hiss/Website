@@ -54,7 +54,6 @@ const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
-        // Add your form submission logic here
         alert('Thank you for your message! I will get back to you soon.');
         this.reset();
     });
@@ -93,4 +92,61 @@ window.addEventListener('scroll', () => {
             element.style.transform = 'translateY(0)';
         }
     });
+});
+
+// light/ dark mode toggle
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('themeToggle');
+    const icon = themeToggle.querySelector('i');
+
+    function setTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        icon.className = theme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+    }
+
+    //  toggle theme
+    function toggleTheme() {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        setTheme(newTheme);
+    }
+
+    // theme from localStorage or default to dark
+    function initializeTheme() {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            setTheme(savedTheme);
+        } else {
+            setTheme('dark'); //  dark mode default
+        }
+    }
+
+    themeToggle.addEventListener('click', toggleTheme);
+
+    initializeTheme();
+
+    // mobile menu
+    const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+    const mobileNav = document.querySelector('.nav-links');
+
+    if (mobileNavToggle && mobileNav) {
+        mobileNavToggle.addEventListener('click', () => {
+            mobileNav.classList.toggle('active');
+        });
+
+        // user clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNav.classList.remove('active');
+            });
+        });
+
+        // user clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileNav.contains(e.target) && !mobileNavToggle.contains(e.target)) {
+                mobileNav.classList.remove('active');
+            }
+        });
+    }
 });

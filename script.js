@@ -57,31 +57,48 @@ if (contactForm) {
     contactForm.addEventListener('submit', async function(e) {
         e.preventDefault();
         
-        // Show loading state
+        // show loading state
+        const submitButton = this.querySelector('button[type="submit"]');
+        const buttonText = submitButton.innerHTML;
+        submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        submitButton.disabled = true;
+        
         formStatus.textContent = 'Sending message...';
         formStatus.className = 'form-status';
         formStatus.style.display = 'block';
 
         try {
+            // createe form data
             const formData = new FormData(this);
-            const response = await fetch(this.action, {
+            
+            // send data to api
+            const response = await fetch('https://api.web3forms.com/submit', {
                 method: 'POST',
                 body: formData
             });
 
             const data = await response.json();
 
-            if (response.ok) {
-                formStatus.textContent = 'Message sent successfully!';
+            if (data.success) {
+                // success message
+                formStatus.textContent = 'Message sent successfully! I\'ll get back to you soon.';
                 formStatus.className = 'form-status success';
-                this.reset();
+                // reset form
+                contactForm.reset();
             } else {
-                formStatus.textContent = 'There was an error sending your message. Please try again.';
+                // rrror message
+                formStatus.textContent = data.message || 'Something went wrong. Please try again.';
                 formStatus.className = 'form-status error';
             }
         } catch (error) {
-            formStatus.textContent = 'There was an error sending your message. Please try again.';
+            // network or other error
+            formStatus.textContent = 'Failed to send message. Please check your connection and try again.';
             formStatus.className = 'form-status error';
+            console.error('Form submission error:', error);
+        } finally {
+            // restore button state
+            submitButton.innerHTML = buttonText;
+            submitButton.disabled = false;
         }
     });
 }

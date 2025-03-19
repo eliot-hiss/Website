@@ -105,7 +105,7 @@
                     </div>
                 </div>
                 <div class="experience-gallery">
-                    <img src="images/internship2.JPG" alt="Internship Experience 2" class="gallery-img">
+                    <img src="images/internship2.jpg" alt="Internship Experience 2" class="gallery-img">
                     <img src="images/internship3.jpg" alt="Internship Experience 3" class="gallery-img">
                 </div>
             </div>
@@ -137,7 +137,7 @@
                         <p class="gallery-caption">Before</p>
                     </div>
                     <div class="gallery-item">
-                        <img src="images/volunteers.JPG" alt="Volunteers working on the project" class="gallery-img">
+                        <img src="images/volunteers.jpg" alt="Volunteers working on the project" class="gallery-img">
                         <p class="gallery-caption">Volunteers in Action</p>
                     </div>
                     <div class="gallery-item">
@@ -214,7 +214,7 @@
     <section id="contact" class="page-section">
         <h2 class="section-title">Get In Touch</h2>
         <div class="contact-container">
-            <form action="https://formsubmit.co/eliot.hiss47@gmail.com" method="POST">
+            <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
                 <div class="form-group">
                     <input type="text" name="name" placeholder="Name" required>
                 </div>
@@ -224,9 +224,10 @@
                 <div class="form-group">
                     <textarea name="message" placeholder="Message" rows="5" required></textarea>
                 </div>
-                <input type="hidden" name="_subject" value="New Contact Form Submission">
-                <input type="hidden" name="_next" value="https://eliothiss.github.io/thank-you.html">
-                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="access_key" value="7fb726e8-1b0d-4a9e-98f3-8715a1cf9ce8">
+                <input type="hidden" name="subject" value="New Contact Form Submission">
+                <input type="hidden" name="from_name" value="Portfolio Contact Form">
+                <div id="formStatus" class="form-status"></div>
                 <button type="submit" class="cta-button">Send Message</button>
             </form>
         </div>

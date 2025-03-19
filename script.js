@@ -51,11 +51,41 @@ window.addEventListener('scroll', () => {
 
 // contact form submission
 const contactForm = document.getElementById('contactForm');
+const formStatus = document.getElementById('formStatus');
+
 if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', async function(e) {
         e.preventDefault();
-        alert('Thank you for your message! I will get back to you soon.');
-        this.reset();
+        
+        // Show loading state
+        formStatus.textContent = 'Sending message...';
+        formStatus.className = 'form-status';
+        formStatus.style.display = 'block';
+
+        try {
+            const formData = new FormData(this);
+            const response = await fetch(this.action, {
+                method: 'POST',
+                body: formData
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                formStatus.textContent = 'Message sent successfully!';
+                formStatus.className = 'form-status success';
+                this.reset();
+                setTimeout(() => {
+                    window.location.href = 'https://eliothiss.github.io/thank-you.html';
+                }, 2000);
+            } else {
+                formStatus.textContent = 'There was an error sending your message. Please try again.';
+                formStatus.className = 'form-status error';
+            }
+        } catch (error) {
+            formStatus.textContent = 'There was an error sending your message. Please try again.';
+            formStatus.className = 'form-status error';
+        }
     });
 }
 

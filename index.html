@@ -9,15 +9,23 @@
     <link rel="icon" type="image/png" href="images/logo2.png">
 </head>
 <body>
+    <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
     <!-- Nav bar -->
     <nav class="navbar">
         <a href="#home" class="logo">
             <img src="images/logo2.png" alt="EH Logo" class="logo-img">
         </a>
+        <button class="mobile-nav-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
         <div class="nav-links">
             <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
             <a href="#experience">Experience</a>
+            <a href="#eagle-scout">Eagle Scout</a>
             <a href="#projects">Projects</a>
             <a href="#education">Education</a>
             <a href="#contact">Contact</a>
@@ -41,63 +49,12 @@
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="page-section">
-        <h2 class="section-title">Experience</h2>
-        <div class="experience-container">
-            <div class="experience-card">
-                <div class="experience-image">
-                    <img src="images/internship1.jpg" alt="Accenture Internship" class="internship-img">
-                </div>
-                <div class="experience-content">
-                    <h3>AI and Data Science Intern</h3>
-                    <h4>Accenture — The Dock Innovation Hub</h4>
-                    <p class="experience-date">June 2024 - August 2024</p>
-                    <ul>
-                        <li>Worked with Azure Document Intelligence to extract information from documents, developing a solution that improved data processing efficiency.</li>
-                        <li>Collaborated with team to optimize healthcare medication advertisements targeted to Health Care Professionals.</li>
-                        <li>Won third place in the Internpreneur program for developing an innovative project during the internship.</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="experience-gallery">
-                <img src="images/internship2.jpg" alt="Internship Experience 2" class="gallery-img">
-                <img src="images/internship3.jpg" alt="Internship Experience 3" class="gallery-img">
-            </div>
-        </div>
-    </section>
-
-    <!-- Eagle Scout Project Section -->
-    <section id="eagle-scout" class="page-section">
-        <h2 class="section-title">Eagle Scout Project</h2>
-        <div class="eagle-scout-container">
-            <div class="eagle-scout-content">
-                <h3>Forbes House Museum Garden Restoration</h3>
-                <p class="project-description">Organized and led 40 volunteers in the restoration and enhancement of the Forbes House Museum gardens, resulting in recognition from the National Garden Club of America.</p>
-                <div class="eagle-scout-gallery">
-                    <div class="gallery-item">
-                        <img src="images/gardenBefore.jpg" alt="Before the project" class="gallery-img">
-                        <p class="gallery-caption">Before</p>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/volunteers.jpg" alt="Volunteers working on the project" class="gallery-img">
-                        <p class="gallery-caption">Volunteers in Action</p>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/gardenAfter.jpg" alt="After the project" class="gallery-img">
-                        <p class="gallery-caption">After</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- About Section -->
     <section id="about" class="page-section">
         <h2 class="section-title">About Me</h2>
         <div class="about-content">
-            <p>I'm a passionate software engineer with a strong foundation in computer science and practical experience in mobile and web development. Currently pursuing my B.S. in Engineering at Virginia Tech, I combine academic excellence with hands-on project experience.</p>
-            <p>My expertise spans across multiple programming languages and technologies, with a particular focus on Android development and full-stack applications.</p>
+            <p>I'm a Computer Science student at Virginia Tech with a passion for mobile app development and AI/data science. My experience spans from creating innovative Android applications to developing AI solutions at Accenture's Dock Innovation Hub.</p>
+            <p>As a bilingual software engineer fluent in English and French, I combine technical expertise with strong communication skills. My leadership experience as an Eagle Scout project leader and fraternity executive committee member demonstrates my ability to drive collaborative initiatives and deliver impactful results.</p>
             <div class="skills-grid">
                 <div class="skill-card">
                     <i class="fab fa-android"></i>
@@ -122,6 +79,71 @@
                 <div class="skill-card">
                     <i class="fas fa-code"></i>
                     <h3>C/C++</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="page-section">
+        <h2 class="section-title">Experience</h2>
+        <div class="experience-container">
+            <div class="experience-group">
+                <div class="experience-card">
+                    <div class="experience-image">
+                        <img src="images/internship1.jpg" alt="Accenture Internship" class="internship-img">
+                    </div>
+                    <div class="experience-content">
+                        <h3>AI and Data Science Intern</h3>
+                        <h4>Accenture — The Dock Innovation Hub</h4>
+                        <p class="experience-date">June 2024 - August 2024</p>
+                        <ul>
+                            <li>Worked with Azure Document Intelligence to extract information from documents, developing a solution that improved data processing efficiency.</li>
+                            <li>Collaborated with team to optimize healthcare medication advertisements targeted to Health Care Professionals.</li>
+                            <li>Won third place in the Internpreneur program for developing an innovative project during the internship.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="experience-gallery">
+                    <img src="images/internship2.jpg" alt="Internship Experience 2" class="gallery-img">
+                    <img src="images/internship3.jpg" alt="Internship Experience 3" class="gallery-img">
+                </div>
+            </div>
+            <div class="experience-card valet-card">
+                <div class="experience-content">
+                    <h3>Team Leader</h3>
+                    <h4>The Boston Copley Marriott and The Hotel Viking</h4>
+                    <p class="experience-date">Summer 2021, 2022, 2023</p>
+                    <ul>
+                        <li>Managed high-value vehicle operations at luxury hotels, demonstrating responsibility and attention to detail.</li>
+                        <li>Led valet operations handling vehicles worth hundreds of thousands of dollars.</li>
+                        <li>Maintained exceptional customer service standards in fast-paced environments.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Eagle Scout Project Section -->
+    <section id="eagle-scout" class="page-section">
+        <h2 class="section-title">Eagle Scout Project</h2>
+        <div class="eagle-scout-container">
+            <div class="eagle-scout-content">
+                <h3>Forbes House Museum Garden Restoration</h3>
+                <p class="project-description">Organized and led 40 volunteers in the restoration and enhancement of the Forbes House Museum gardens.  Recognized and published by the National Garden Club of America Bulletin.</p>
+                <div class="eagle-scout-gallery">
+                    <div class="gallery-item">
+                        <img src="images/gardenBefore.jpg" alt="Before the project" class="gallery-img">
+                        <p class="gallery-caption">Before</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/volunteers.jpg" alt="Volunteers working on the project" class="gallery-img">
+                        <p class="gallery-caption">Volunteers in Action</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/gardenAfter.jpg" alt="After the project" class="gallery-img">
+                        <p class="gallery-caption">After</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -160,7 +182,6 @@
                 <h3>Virginia Polytechnic Institute and State University</h3>
                 <p class="degree">B.S. of Engineering, Computer Science</p>
                 <p class="year">2021 - 2025</p>
-                <p class="description">Current GPA: 3.2/4.0</p>
                 <p>Key Coursework:</p>
                 <ul>
                     <li>Object-Oriented Programming</li>
@@ -178,7 +199,6 @@
                 <h3>Milton High School</h3>
                 <p class="degree">High School Diploma</p>
                 <p class="year">2017 - 2021</p>
-                <p class="description">GPA: 3.6/4.0</p>
                 <ul>
                     <li>Captain of the Varsity Men's Tennis Team</li>
                     <li>5 on AP French and English Exams</li>
@@ -194,16 +214,19 @@
     <section id="contact" class="page-section">
         <h2 class="section-title">Get In Touch</h2>
         <div class="contact-container">
-            <form id="contactForm">
+            <form action="https://formsubmit.co/eliot.hiss47@gmail.com" method="POST">
                 <div class="form-group">
-                    <input type="text" placeholder="Name" required>
+                    <input type="text" name="name" placeholder="Name" required>
                 </div>
                 <div class="form-group">
-                    <input type="email" placeholder="Email" required>
+                    <input type="email" name="email" placeholder="Email" required>
                 </div>
                 <div class="form-group">
-                    <textarea placeholder="Message" rows="5" required></textarea>
+                    <textarea name="message" placeholder="Message" rows="5" required></textarea>
                 </div>
+                <input type="hidden" name="_subject" value="New Contact Form Submission">
+                <input type="hidden" name="_next" value="https://eliothiss.github.io/thank-you.html">
+                <input type="hidden" name="_template" value="table">
                 <button type="submit" class="cta-button">Send Message</button>
             </form>
         </div>
@@ -213,6 +236,7 @@
         <p>&copy; <span id="currentYear"></span> Eliot Hiss. All rights reserved.</p>
     </footer>
 
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

@@ -75,9 +75,6 @@ if (contactForm) {
                 formStatus.textContent = 'Message sent successfully!';
                 formStatus.className = 'form-status success';
                 this.reset();
-                setTimeout(() => {
-                    window.location.href = 'https://eliothiss.github.io/thank-you.html';
-                }, 2000);
             } else {
                 formStatus.textContent = 'There was an error sending your message. Please try again.';
                 formStatus.className = 'form-status error';

@@ -175,19 +175,19 @@ body {
 }
 
 .profile-img {
-    width: 95%;
-    height: 95%;
-    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     transition: transform 0.3s ease;
     filter: drop-shadow(0 0 5px var(--accent-color-light));
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+    transform: none;
 }
 
 .profile-container:hover .profile-img {
-    transform: translate(-50%, -50%) scale(1.1);
+    transform: scale(1.1);
 }
 
 .profile-container:hover::before {
@@ -723,6 +723,23 @@ footer {
         height: 200px;
     }
 
+    .profile-img {
+        transition: none;
+        transform: none;
+    }
+
+    .profile-container:hover .profile-img {
+        transform: none;
+    }
+
+    .profile-container:hover {
+        transform: none;
+    }
+
+    .profile-container:hover::before {
+        animation: none;
+    }
+
     .page-section {
         padding: 5rem 1rem 2rem;
     }
@@ -833,6 +850,23 @@ footer {
     .profile-container {
         width: 150px;
         height: 150px;
+    }
+
+    .profile-img {
+        transition: none;
+        transform: none;
+    }
+
+    .profile-container:hover .profile-img {
+        transform: none;
+    }
+
+    .profile-container:hover {
+        transform: none;
+    }
+
+    .profile-container:hover::before {
+        animation: none;
     }
 
     .section-title {
@@ -960,4 +994,26 @@ footer {
 .valet-card:hover::before, .about-content:hover::before, .contact-container:hover::before,
 .eagle-scout-content:hover::before, .education-card:hover::before {
     opacity: 0.8;
+}
+
+.form-status {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    text-align: center;
+    display: none;
+}
+
+.form-status.error {
+    display: block;
+    background-color: rgba(255, 0, 0, 0.1);
+    color: #ff0000;
+    border: 1px solid rgba(255, 0, 0, 0.2);
+}
+
+.form-status.success {
+    display: block;
+    background-color: rgba(0, 255, 0, 0.1);
+    color: #00ff00;
+    border: 1px solid rgba(0, 255, 0, 0.2);
 }

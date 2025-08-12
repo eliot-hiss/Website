@@ -4,9 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eliot Hiss | Developer</title>
+    <!-- Basic SEO Meta Tags -->
+    <meta name="description" content="Eliot Hiss - Computer Science student at Virginia Tech. Software engineer with experience in data analysis, AI, and mobile app development. Skilled in Python, Java, JavaScript, and SQL.">
+    <meta name="keywords" content="Eliot Hiss, Software Engineer, Computer Science, Virginia Tech, Data Analyst, Python, Java, JavaScript, Mobile Development, AI">
+    <meta name="author" content="Eliot Hiss">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Eliot Hiss | Software Engineer">
+    <meta property="og:description" content="Computer Science student at Virginia Tech. Software engineer with experience in data analysis, AI, and mobile app development.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://eliot-hiss.github.io/Website/">
+    <meta property="og:image" content="https://eliot-hiss.github.io/Website/images/BUST.jpg">
+    <meta property="og:site_name" content="Eliot Hiss Portfolio">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Eliot Hiss | Software Engineer">
+    <meta name="twitter:description" content="Computer Science student at Virginia Tech. Software engineer with experience in data analysis, AI, and mobile app development.">
+    <meta name="twitter:image" content="https://eliot-hiss.github.io/Website/images/BUST.jpg">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://eliot-hiss.github.io/Website/">
+
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" type="image/png" href="images/logo2.png">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Eliot Hiss",
+      "jobTitle": "Software Engineer",
+      "url": "https://eliot-hiss.github.io/Website/",
+      "image": "https://eliot-hiss.github.io/Website/images/BUST.jpg",
+      "description": "Computer Science student at Virginia Tech with experience in data analysis, AI, and mobile app development",
+      "email": "eliot.hiss47@gmail.com",
+      "alumniOf": {"@type": "CollegeOrUniversity", "name": "Virginia Polytechnic Institute and State University"},
+      "knowsAbout": ["Software Engineering", "Data Analysis", "Python", "Java", "JavaScript", "Mobile Development", "AI"],
+      "sameAs": [
+        "https://linkedin.com/in/eliothiss",
+        "https://github.com/eliot-hiss",
+        "https://www.instagram.com/eliot.hiss"
+      ]
+    }
+    </script>
 </head>
 <body>
     <button class="theme-toggle" id="themeToggle">
@@ -30,21 +74,78 @@
             <a href="#education">Education</a>
             <a href="#contact">Contact</a>
         </div>
+        <div class="nav-social" aria-label="social links">
+            <a href="https://www.instagram.com/eliot.hiss" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com/in/eliothiss" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/eliot-hiss" aria-label="GitHub" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+            <a href="images/Eliot_Hiss_Resume.pdf" aria-label="Resume" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i></a>
+            <a href="mailto:eliot.hiss47@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
     </nav>
 
     <!-- Home Section -->
     <section id="home" class="page-section">
         <div class="hero-content">
             <div class="profile-container">
-                <img src="images/logo2.png" alt="Eliot Hiss" class="profile-img">
+                <img src="images/BUST.jpg" alt="Eliot" class="profile-img">
             </div>
             <h1>Eliot Hiss</h1>
             <div class="typewriter">
                 <h2>Software Engineer</h2>
             </div>
-            <div class="social-links">
-                <a href="https://linkedin.com/in/eliothiss" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:eliot.hiss47@gmail.com"><i class="fas fa-envelope"></i></a>
+            <!-- Skills row placed between title and About -->
+            <div class="skills-section icon-only">
+                <div class="skills-grid">
+                    <div class="skill-card" style="--skill-color:#e76f00" title="Java – Core backend and Android language.">
+                        <div class="skill-icon">
+                            <i class="fab fa-java"></i>
+                            <span class="shine"></span>
+                        </div>
+                        <h3>Java</h3>
+                    </div>
+                    <div class="skill-card" style="--skill-color:#2496ED" title="Docker – Containerization and deployment.">
+                        <div class="skill-icon">
+                            <i class="fab fa-docker"></i>
+                            <span class="shine"></span>
+                        </div>
+                        <h3>Docker</h3>
+                    </div>
+                    <div class="skill-card" style="--skill-color:#3776AB" title="Python – Scripting, automation, and data science.">
+                        <div class="skill-icon">
+                            <i class="fab fa-python"></i>
+                            <span class="shine"></span>
+                        </div>
+                        <h3>Python</h3>
+                    </div>
+                    <div class="skill-card" style="--skill-color:#F7DF1E" title="JavaScript – Web development.">
+                        <div class="skill-icon">
+                            <i class="fab fa-js"></i>
+                            <span class="shine"></span>
+                        </div>
+                        <h3>JavaScript</h3>
+                    </div>
+                    <div class="skill-card" style="--skill-color:#61DAFB" title="React – Frontend framework.">
+                        <div class="skill-icon">
+                            <i class="fab fa-react"></i>
+                            <span class="shine"></span>
+                        </div>
+                        <h3>React</h3>
+                    </div>
+                    <div class="skill-card" style="--skill-color:#00C2FF" title="SQL/Database – Querying and data management.">
+                        <div class="skill-icon">
+                            <i class="fas fa-database"></i>
+                            <span class="shine"></span>
+                        </div>
+                        <h3>SQL/Database</h3>
+                    </div>
+                    <div class="skill-card" style="--skill-color:#29B5E8" title="Snowflake – Data warehousing and analytics.">
+                        <div class="skill-icon">
+                            <i class="fas fa-snowflake"></i>
+                            <span class="shine"></span>
+                        </div>
+                        <h3>Snowflake</h3>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -53,35 +154,13 @@
     <section id="about" class="page-section">
         <h2 class="section-title">About Me</h2>
         <div class="about-content">
-            <p>I'm a Computer Science student at Virginia Tech with a passion for mobile app development and AI/data science. My experience spans from creating innovative Android applications to developing AI solutions at Accenture's Dock Innovation Hub.</p>
-            <p>As a bilingual software engineer fluent in English and French, I combine technical expertise with strong communication skills. My leadership experience as an Eagle Scout project leader and fraternity executive committee member demonstrates my ability to drive collaborative initiatives and deliver impactful results.</p>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <i class="fab fa-android"></i>
-                    <h3>Android Development</h3>
-                </div>
-                <div class="skill-card">
-                    <i class="fab fa-java"></i>
-                    <h3>Java/Kotlin</h3>
-                </div>
-                <div class="skill-card">
-                    <i class="fab fa-python"></i>
-                    <h3>Python</h3>
-                </div>
-                <div class="skill-card">
-                    <i class="fab fa-github"></i>
-                    <h3>Git/GitHub</h3>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-database"></i>
-                    <h3>Firebase</h3>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-code"></i>
-                    <h3>C/C++</h3>
-                </div>
-            </div>
+            <p>Computer Science student at Virginia Tech. I build software and analyze data.</p>
+            <p>Recent experience includes developing automated data pipelines with Snowflake at Invicti and working with Azure Document Intelligence at Accenture's Dublin Innovation Hub.</p>
+            <p>Fluent in English and French.</p>
+            <p>Currently looking for full-time software engineering opportunities.</p>
         </div>
+
+        
     </section>
 
     <!-- Experience Section -->
@@ -90,8 +169,24 @@
         <div class="experience-container">
             <div class="experience-group">
                 <div class="experience-card">
+                    <div class="experience-image landscape">
+                        <img src="images/invicti.jpg" alt="Invicti Internship" class="internship-img fit-contain">
+                    </div>
+                    <div class="experience-content">
+                        <h3>Data Analyst Intern</h3>
+                        <h4>Invicti — Boston, MA</h4>
+                        <p class="experience-date">May 2025 - August 2025</p>
+                        <ul>
+                            <li>Utilize Snowflake to perform complex SQL queries for extracting and analyzing client data from large datasets.</li>
+                            <li>Develop automated data pipelines to export query results which generate comprehensive Google Sheets audits that provide Customer Success Managers with actionable insights on client usage patterns, supporting data-driven strategies for improved client retention.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="experience-group">
+                <div class="experience-card">
                     <div class="experience-image">
-                        <img src="images/internship1.JPG" alt="Accenture Internship" class="internship-img">
+                        <img src="images/internship3.jpg" alt="Accenture Internship" class="internship-img">
                     </div>
                     <div class="experience-content">
                         <h3>AI and Data Science Intern</h3>
@@ -105,8 +200,8 @@
                     </div>
                 </div>
                 <div class="experience-gallery">
-                    <img src="images/internship2.JPG" alt="Internship Experience 2" class="gallery-img">
-                    <img src="images/internship3.jpg" alt="Internship Experience 3" class="gallery-img">
+                    <img src="images/internship2.jpg" alt="Internship Experience 2" class="gallery-img">
+                    <img src="images/internship1.jpg" alt="Internship Experience 3" class="gallery-img">
                 </div>
             </div>
             <div class="experience-card valet-card">
@@ -119,6 +214,10 @@
                         <li>Led valet operations handling vehicles worth hundreds of thousands of dollars.</li>
                         <li>Maintained exceptional customer service standards in fast-paced environments.</li>
                     </ul>
+                </div>
+                <div class="experience-gallery">
+                    <img src="images/viking.jpg" alt="Hotel Viking Valet" class="gallery-img">
+                    <img src="images/marriott.jpg" alt="Copley Marriott Valet" class="gallery-img">
                 </div>
             </div>
         </div>
@@ -137,7 +236,7 @@
                         <p class="gallery-caption">Before</p>
                     </div>
                     <div class="gallery-item">
-                        <img src="images/volunteers.JPG" alt="Volunteers working on the project" class="gallery-img">
+                        <img src="images/volunteers.jpg" alt="Volunteers working on the project" class="gallery-img">
                         <p class="gallery-caption">Volunteers in Action</p>
                     </div>
                     <div class="gallery-item">
@@ -154,23 +253,32 @@
         <h2 class="section-title">My Projects</h2>
         <div class="projects-grid">
             <div class="project-card">
-                <img src="images/under.jpg" alt="GeoSnap">
-                <h3>GeoSnap</h3>
-                <p>An Android application that combines movie information with real-world locations, built using Java/Kotlin, Firebase, and Google Maps SDK.</p>
-                <div class="project-links">
-                    <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
-                    <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live</a>
+                <div class="project-header">
+                    <img src="images/under.jpg" alt="GeoSnap">
+                    <h3>GeoSnap</h3>
+                </div>
+                <div class="project-content">
+                    <p>An Android application that combines movie information with real-world locations, built using Java/Kotlin, Firebase, and Google Maps SDK.</p>
+                    <div class="project-links">
+                        <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                        <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live</a>
+                    </div>
                 </div>
             </div>
             <div class="project-card">
-                <img src="images/under.jpg" alt="OnTrack">
-                <h3>OnTrack</h3>
-                <p>An innovative Android application for personal goal setting and tracking, featuring RecyclerView, ViewModel, and LiveData components.</p>
-                <div class="project-links">
-                    <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
-                    <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live</a>
+                <div class="project-header">
+                    <img src="images/under.jpg" alt="OnTrack">
+                    <h3>OnTrack</h3>
+                </div>
+                <div class="project-content">
+                    <p>An innovative Android application for personal goal setting and tracking, featuring RecyclerView, ViewModel, and LiveData components.</p>
+                    <div class="project-links">
+                        <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                        <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live</a>
+                    </div>
                 </div>
             </div>
+            
         </div>
     </section>
 
@@ -236,6 +344,11 @@
     <footer>
         <p>&copy; <span id="currentYear"></span> Eliot Hiss. All rights reserved.</p>
     </footer>
+
+    <!-- Lightbox overlay -->
+    <div id="lightbox" class="lightbox hidden" aria-modal="true" role="dialog">
+        <img id="lightboxImage" alt="Expanded view" />
+    </div>
 
     <script src="script.js"></script>
 </body>

@@ -195,7 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Image lightbox for all gallery/project/experience images
+// image lightbox
 document.addEventListener('DOMContentLoaded', () => {
     const lightbox = document.getElementById('lightbox');
     const lightboxImage = document.getElementById('lightboxImage');
@@ -212,13 +212,12 @@ document.addEventListener('DOMContentLoaded', () => {
         lightboxImage.src = '';
     }
 
-    // Click to open
-    const clickableSelectors = ['.experience-image img', '.project-header img', '.gallery-img'];
-    document.querySelectorAll(clickableSelectors.join(',')).forEach(img => {
+    const selectors = ['.experience-image img', '.project-header img', '.gallery-img'];
+    document.querySelectorAll(selectors.join(',')).forEach(img => {
+        img.style.cursor = 'zoom-in';
         img.addEventListener('click', () => openLightbox(img.src, img.alt));
     });
 
-    // Close on click outside or Escape
     lightbox.addEventListener('click', (e) => {
         if (e.target === lightbox) closeLightbox();
     });

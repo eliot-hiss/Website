@@ -68,7 +68,7 @@ if (contactForm) {
         formStatus.style.display = 'block';
 
         try {
-            // createe form data
+            // create form data
             const formData = new FormData(this);
             
             // send data to api
@@ -86,7 +86,7 @@ if (contactForm) {
                 // reset form
                 contactForm.reset();
             } else {
-                // rrror message
+                // error message
                 formStatus.textContent = data.message || 'Something went wrong. Please try again.';
                 formStatus.className = 'form-status error';
             }
@@ -170,19 +170,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initializeTheme();
 
-    // mobile menu
+    // mobile menu with accessibility
     const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
     const mobileNav = document.querySelector('.nav-links');
 
     if (mobileNavToggle && mobileNav) {
         mobileNavToggle.addEventListener('click', () => {
-            mobileNav.classList.toggle('active');
+            const isOpen = mobileNav.classList.toggle('active');
+            mobileNavToggle.setAttribute('aria-expanded', isOpen);
         });
 
         // user clicking a link
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileNav.classList.remove('active');
+                mobileNavToggle.setAttribute('aria-expanded', 'false');
             });
         });
 
@@ -190,7 +192,49 @@ document.addEventListener('DOMContentLoaded', () => {
         document.addEventListener('click', (e) => {
             if (!mobileNav.contains(e.target) && !mobileNavToggle.contains(e.target)) {
                 mobileNav.classList.remove('active');
+                mobileNavToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        // close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && mobileNav.classList.contains('active')) {
+                mobileNav.classList.remove('active');
+                mobileNavToggle.setAttribute('aria-expanded', 'false');
+                mobileNavToggle.focus();
             }
         });
     }
+});
+
+// Image lightbox for all gallery/project/experience images
+document.addEventListener('DOMContentLoaded', () => {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightboxImage');
+    if (!lightbox || !lightboxImage) return;
+
+    function openLightbox(src, alt) {
+        lightboxImage.src = src;
+        lightboxImage.alt = alt || 'Expanded view';
+        lightbox.classList.remove('hidden');
+    }
+
+    function closeLightbox() {
+        lightbox.classList.add('hidden');
+        lightboxImage.src = '';
+    }
+
+    // Click to open
+    const clickableSelectors = ['.experience-image img', '.project-header img', '.gallery-img'];
+    document.querySelectorAll(clickableSelectors.join(',')).forEach(img => {
+        img.addEventListener('click', () => openLightbox(img.src, img.alt));
+    });
+
+    // Close on click outside or Escape
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeLightbox();
+    });
 });

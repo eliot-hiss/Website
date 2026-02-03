@@ -3,13 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eliot Hiss | Developer</title>
+    <title>Eliot Hiss | Data Scientist & Software Engineer</title>
+    <!-- Basic SEO Meta Tags -->
+    <meta name="description" content="Eliot Hiss - Data Scientist at WoolData. Computer Science graduate from Virginia Tech with experience in data analysis, AI, machine learning, Python, SQL, and cloud technologies.">
+    <meta name="keywords" content="Eliot Hiss, Data Scientist, Software Engineer, Computer Science, Virginia Tech, Python, SQL, Snowflake, AWS, Docker, Machine Learning, Data Analysis, TensorFlow">
+    <meta name="author" content="Eliot Hiss">
+    <meta name="robots" content="index, follow">
+
+    <!-- Mobile Specific -->
+    <meta name="theme-color" content="#9B4DCA">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Eliot Hiss | Data Scientist & Software Engineer">
+    <meta property="og:description" content="Data Scientist at WoolData. Computer Science graduate from Virginia Tech specializing in data analysis, AI, and machine learning.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://eliothiss.com/">
+    <meta property="og:image" content="https://eliothiss.com/images/BUST.jpg">
+    <meta property="og:site_name" content="Eliot Hiss Portfolio">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Eliot Hiss | Data Scientist & Software Engineer">
+    <meta name="twitter:description" content="Data Scientist at WoolData. Computer Science graduate from Virginia Tech specializing in data analysis, AI, and machine learning.">
+    <meta name="twitter:image" content="https://eliothiss.com/images/BUST.jpg">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://eliothiss.com/">
+
+    <!-- Preconnect for faster resource loading -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" type="image/png" href="images/logo2.png">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Eliot Hiss",
+      "jobTitle": "Data Scientist",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "WoolData"
+      },
+      "url": "https://eliothiss.com/",
+      "image": "https://eliothiss.com/images/BUST.jpg",
+      "description": "Data Scientist at WoolData with Computer Science degree from Virginia Tech. Specializes in data analysis, machine learning, and cloud technologies.",
+      "email": "eliot.hiss47@gmail.com",
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Virginia Polytechnic Institute and State University"
+      },
+      "knowsAbout": ["Data Science", "Machine Learning", "Python", "SQL", "Snowflake", "AWS", "Docker", "TensorFlow", "Data Analysis"],
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Data Scientist",
+        "occupationLocation": {
+          "@type": "Place",
+          "name": "Remote"
+        }
+      },
+      "sameAs": [
+        "https://linkedin.com/in/eliothiss",
+        "https://github.com/eliot-hiss",
+        "https://www.instagram.com/eliot.hiss"
+      ]
+    }
+    </script>
 </head>
 <body>
-    <button class="theme-toggle" id="themeToggle">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light theme">
         <i class="fas fa-moon"></i>
     </button>
 
@@ -18,10 +88,10 @@
         <a href="#home" class="logo">
             <img src="images/logo2.png" alt="EH Logo" class="logo-img">
         </a>
-        <button class="mobile-nav-toggle">
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
             <i class="fas fa-bars"></i>
         </button>
-        <div class="nav-links">
+        <nav class="nav-links" role="navigation" aria-label="Main navigation">
             <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
             <a href="#experience">Experience</a>
@@ -29,22 +99,86 @@
             <a href="#projects">Projects</a>
             <a href="#education">Education</a>
             <a href="#contact">Contact</a>
+            <div class="nav-social-mobile" aria-label="social links">
+                <a href="https://www.instagram.com/eliot.hiss" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com/in/eliothiss" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/eliot-hiss" aria-label="GitHub" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                <a href="images/Eliot_Hiss_Resume.pdf" aria-label="Resume" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i></a>
+                <a href="mailto:eliot.hiss47@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </nav>
+        <div class="nav-social-desktop" aria-label="social links">
+            <a href="https://www.instagram.com/eliot.hiss" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com/in/eliothiss" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/eliot-hiss" aria-label="GitHub" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+            <a href="images/Eliot_Hiss_Resume.pdf" aria-label="Resume" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i></a>
+            <a href="mailto:eliot.hiss47@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
         </div>
     </nav>
 
     <!-- Home Section -->
-    <section id="home" class="page-section">
+    <section id="home" class="page-section" aria-label="Home introduction">
         <div class="hero-content">
             <div class="profile-container">
-                <img src="images/logo2.png" alt="Eliot Hiss" class="profile-img">
+                <img src="images/BUST.jpg" alt="Eliot" class="profile-img">
             </div>
             <h1>Eliot Hiss</h1>
             <div class="typewriter">
                 <h2>Software Engineer</h2>
             </div>
-            <div class="social-links">
-                <a href="https://linkedin.com/in/eliothiss" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:eliot.hiss47@gmail.com"><i class="fas fa-envelope"></i></a>
+            <!-- Skills row placed between title and About -->
+            <div class="skills-section icon-only">
+                <div class="skills-grid">
+                    <div class="skill-card" style="--skill-color:#FF9900" title="AWS – Cloud infrastructure and services.">
+                        <div class="skill-icon">
+                            <i class="fab fa-aws"></i>
+                            <span class="shine"></span>
+                        </div>
+                        <h3>AWS</h3>
+                    </div>
+                    <div class="skill-card" style="--skill-color:#2496ED" title="Docker – Containerization and deployment.">
+                        <div class="skill-icon">
+                            <i class="fab fa-docker"></i>
+                            <span class="shine"></span>
+                        </div>
+                        <h3>Docker</h3>
+                    </div>
+                    <div class="skill-card" style="--skill-color:#306998" title="Python – Scripting, automation, and data science.">
+                        <div class="skill-icon">
+                            <i class="fab fa-python"></i>
+                            <span class="shine"></span>
+                        </div>
+                        <h3>Python</h3>
+                    </div>
+                    <div class="skill-card" style="--skill-color:#F7DF1E" title="JavaScript – Web development.">
+                        <div class="skill-icon">
+                            <i class="fab fa-js"></i>
+                            <span class="shine"></span>
+                        </div>
+                        <h3>JavaScript</h3>
+                    </div>
+                    <div class="skill-card" style="--skill-color:#61DAFB" title="React – Frontend framework.">
+                        <div class="skill-icon">
+                            <i class="fab fa-react"></i>
+                            <span class="shine"></span>
+                        </div>
+                        <h3>React</h3>
+                    </div>
+                    <div class="skill-card" style="--skill-color:#00C2FF" title="SQL/Database – Querying and data management.">
+                        <div class="skill-icon">
+                            <i class="fas fa-database"></i>
+                            <span class="shine"></span>
+                        </div>
+                        <h3>SQL/Database</h3>
+                    </div>
+                    <div class="skill-card" style="--skill-color:#29B5E8" title="Snowflake – Data warehousing and analytics.">
+                        <div class="skill-icon">
+                            <i class="fas fa-snowflake"></i>
+                            <span class="shine"></span>
+                        </div>
+                        <h3>Snowflake</h3>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -53,35 +187,12 @@
     <section id="about" class="page-section">
         <h2 class="section-title">About Me</h2>
         <div class="about-content">
-            <p>I'm a Computer Science student at Virginia Tech with a passion for mobile app development and AI/data science. My experience spans from creating innovative Android applications to developing AI solutions at Accenture's Dock Innovation Hub.</p>
-            <p>As a bilingual software engineer fluent in English and French, I combine technical expertise with strong communication skills. My leadership experience as an Eagle Scout project leader and fraternity executive committee member demonstrates my ability to drive collaborative initiatives and deliver impactful results.</p>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <i class="fab fa-android"></i>
-                    <h3>Android Development</h3>
-                </div>
-                <div class="skill-card">
-                    <i class="fab fa-java"></i>
-                    <h3>Java/Kotlin</h3>
-                </div>
-                <div class="skill-card">
-                    <i class="fab fa-python"></i>
-                    <h3>Python</h3>
-                </div>
-                <div class="skill-card">
-                    <i class="fab fa-github"></i>
-                    <h3>Git/GitHub</h3>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-database"></i>
-                    <h3>Firebase</h3>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-code"></i>
-                    <h3>C/C++</h3>
-                </div>
-            </div>
+            <p>Computer Science graduate from Virginia Tech working as a Data Scientist at WoolData. Previous experience includes data engineering at Invicti and AI development at Accenture's Innovation Hub in Dublin.</p>
+            <p>Fluent in English and French.</p>
+            <p>Founding Father of Lambda Chi Alpha fraternity and Eagle Scout.</p>
         </div>
+
+        
     </section>
 
     <!-- Experience Section -->
@@ -90,8 +201,41 @@
         <div class="experience-container">
             <div class="experience-group">
                 <div class="experience-card">
+                    <div class="experience-image landscape">
+                        <img src="images/wool.png" alt="WoolData company logo" class="internship-img fit-contain" loading="lazy">
+                    </div>
+                    <div class="experience-content">
+                        <h3>Data Scientist</h3>
+                        <h4>WoolData — Remote</h4>
+                        <p class="experience-date">January 2026 - Present</p>
+                        <ul>
+                            <li>Analyze VMware infrastructure assessment data using Python and DuckDB to generate storage sizing recommendations and ROI reports for Pure Storage sales engagements.</li>
+                            <li>Build automated reporting pipelines that transform raw assessment data into client-ready Google Sheets and Slides, as well as PowerPoint presentations and Excel workbooks.</li>
+                            <li>Develop end-to-end data workflows using Google Workspace APIs to automate report generation and delivery across shared drives.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="experience-group">
+                <div class="experience-card">
+                    <div class="experience-image landscape">
+                        <img src="images/invicti.jpg" alt="Invicti company logo" class="internship-img fit-contain" loading="lazy">
+                    </div>
+                    <div class="experience-content">
+                        <h3>Data Analyst Intern</h3>
+                        <h4>Invicti — Boston, MA</h4>
+                        <p class="experience-date">May 2025 - August 2025</p>
+                        <ul>
+                            <li>Utilize Snowflake to perform complex SQL queries for extracting and analyzing client data from large datasets.</li>
+                            <li>Develop automated data pipelines to export query results which generate comprehensive Google Sheets audits that provide Customer Success Managers with actionable insights on client usage patterns, supporting data-driven strategies for improved client retention.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="experience-group">
+                <div class="experience-card">
                     <div class="experience-image">
-                        <img src="images/internship1.JPG" alt="Accenture Internship" class="internship-img">
+                        <img src="images/internship3.jpg" alt="Eliot Hiss at Accenture's Dock Innovation Hub in Dublin" class="internship-img" loading="lazy">
                     </div>
                     <div class="experience-content">
                         <h3>AI and Data Science Intern</h3>
@@ -105,8 +249,8 @@
                     </div>
                 </div>
                 <div class="experience-gallery">
-                    <img src="images/internship2.JPG" alt="Internship Experience 2" class="gallery-img">
-                    <img src="images/internship3.jpg" alt="Internship Experience 3" class="gallery-img">
+                    <img src="images/internship2.jpg" alt="Accenture Innovation Hub workspace" class="gallery-img" loading="lazy">
+                    <img src="images/internship1.jpg" alt="Accenture team collaboration" class="gallery-img" loading="lazy">
                 </div>
             </div>
             <div class="experience-card valet-card">
@@ -119,6 +263,10 @@
                         <li>Led valet operations handling vehicles worth hundreds of thousands of dollars.</li>
                         <li>Maintained exceptional customer service standards in fast-paced environments.</li>
                     </ul>
+                </div>
+                <div class="experience-gallery">
+                    <img src="images/viking.jpg" alt="The Hotel Viking in Newport, Rhode Island" class="gallery-img" loading="lazy">
+                    <img src="images/marriott.jpg" alt="The Boston Copley Marriott" class="gallery-img" loading="lazy">
                 </div>
             </div>
         </div>
@@ -133,15 +281,15 @@
                 <p class="project-description">Organized and led 40 volunteers in the restoration and enhancement of the Forbes House Museum gardens.  Recognized and published by the National Garden Club of America Bulletin.</p>
                 <div class="eagle-scout-gallery">
                     <div class="gallery-item">
-                        <img src="images/gardenBefore.jpg" alt="Before the project" class="gallery-img">
+                        <img src="images/gardenBefore.jpg" alt="Forbes House Museum garden before Eagle Scout restoration project" class="gallery-img" loading="lazy">
                         <p class="gallery-caption">Before</p>
                     </div>
                     <div class="gallery-item">
-                        <img src="images/volunteers.JPG" alt="Volunteers working on the project" class="gallery-img">
+                        <img src="images/volunteers.jpg" alt="40 volunteers working on Forbes House Museum garden restoration" class="gallery-img" loading="lazy">
                         <p class="gallery-caption">Volunteers in Action</p>
                     </div>
                     <div class="gallery-item">
-                        <img src="images/gardenAfter.jpg" alt="After the project" class="gallery-img">
+                        <img src="images/gardenAfter.jpg" alt="Forbes House Museum garden after Eagle Scout restoration project" class="gallery-img" loading="lazy">
                         <p class="gallery-caption">After</p>
                     </div>
                 </div>
@@ -154,23 +302,44 @@
         <h2 class="section-title">My Projects</h2>
         <div class="projects-grid">
             <div class="project-card">
-                <img src="images/under.jpg" alt="GeoSnap">
-                <h3>GeoSnap</h3>
-                <p>An Android application that combines movie information with real-world locations, built using Java/Kotlin, Firebase, and Google Maps SDK.</p>
-                <div class="project-links">
-                    <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
-                    <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live</a>
+                <div class="project-header">
+                    <img src="images/under.jpg" alt="Plant Disease CNN Classifier machine learning project" loading="lazy">
+                    <h3>Plant Disease CNN Classifier</h3>
+                </div>
+                <div class="project-content">
+                    <p>Built a deep learning image classifier using CNN architecture to identify plant diseases from leaf images with 91% accuracy, incorporating preprocessing pipelines and cross validation to ensure model effectiveness across differing environmental conditions.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">TensorFlow/Keras</span>
+                        <span class="tech-badge">NumPy</span>
+                        <span class="tech-badge">Matplotlib</span>
+                        <span class="tech-badge">scikit-learn</span>
+                    </div>
+                    <div class="project-status">
+                        <span class="status-badge"><i class="fas fa-check-circle"></i> Completed</span>
+                    </div>
                 </div>
             </div>
             <div class="project-card">
-                <img src="images/under.jpg" alt="OnTrack">
-                <h3>OnTrack</h3>
-                <p>An innovative Android application for personal goal setting and tracking, featuring RecyclerView, ViewModel, and LiveData components.</p>
-                <div class="project-links">
-                    <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
-                    <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live</a>
+                <div class="project-header">
+                    <img src="images/under.jpg" alt="Flight Deal Aggregator web scraping project" loading="lazy">
+                    <h3>Flight Deal Aggregator</h3>
+                </div>
+                <div class="project-content">
+                    <p>Created a real-time flight deal aggregator scraping data from multiple airline APIs and booking sites, implementing price prediction algorithms and automated alert system that identified pricing anomalies and error fares, saving users an average of $120 per international booking.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">BeautifulSoup</span>
+                        <span class="tech-badge">Selenium</span>
+                        <span class="tech-badge">Pandas</span>
+                        <span class="tech-badge">SQLite</span>
+                    </div>
+                    <div class="project-status">
+                        <span class="status-badge"><i class="fas fa-check-circle"></i> Completed</span>
+                    </div>
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -180,32 +349,25 @@
         <div class="education-timeline">
             <div class="education-card">
                 <h3>Virginia Polytechnic Institute and State University</h3>
-                <p class="degree">B.S. of Engineering, Computer Science</p>
-                <p class="year">2021 - 2025</p>
+                <p class="degree">B.S. in Computer Science</p>
+                <p class="year">2021 - 2025 | GPA: 3.3</p>
                 <p>Key Coursework:</p>
                 <ul>
-                    <li>Object-Oriented Programming</li>
                     <li>Data Structures & Algorithms</li>
+                    <li>Computer Systems</li>
+                    <li>Software Design & Data Structures</li>
                     <li>Computer Organization</li>
-                    <li>Discrete Math</li>
+                    <li>Mobile Software Development</li>
+                    <li>Human-Computer Interaction</li>
+                    <li>Data Analytics & Visualization</li>
+                    <li>Formal Languages & Automata</li>
+                    <li>Comparative Programming Languages</li>
+                    <li>Statistics for Engineering</li>
+                    <li>Applied Combinatorics</li>
+                    <li>Calculus I-III</li>
                     <li>Linear Algebra</li>
-                    <li>Combinatorics</li>
-                    <li>Calculus</li>
-                    <li>Physics</li>
-                    <li>Probability & Statistics</li>
                 </ul>
-            </div>
-            <div class="education-card">
-                <h3>Milton High School</h3>
-                <p class="degree">High School Diploma</p>
-                <p class="year">2017 - 2021</p>
-                <ul>
-                    <li>Captain of the Varsity Men's Tennis Team</li>
-                    <li>5 on AP French and English Exams</li>
-                    <li>Mary and Abigail Adams Scholarship recipient</li>
-                    <li>AP Scholar (4x)</li>
-                    <li>French Baccalauréat Recipient</li>
-                </ul>
+                <p style="margin-top: 1rem;">Founding Father of Lambda Chi Alpha fraternity</p>
             </div>
         </div>
     </section>
@@ -214,19 +376,22 @@
     <section id="contact" class="page-section">
         <h2 class="section-title">Get In Touch</h2>
         <div class="contact-container">
-            <form id="contactForm">
+            <form id="contactForm" aria-label="Contact form">
                 <div class="form-group">
-                    <input type="text" name="name" placeholder="Name" required>
+                    <label for="contactName" class="visually-hidden">Your Name</label>
+                    <input type="text" id="contactName" name="name" placeholder="Name" required aria-required="true">
                 </div>
                 <div class="form-group">
-                    <input type="email" name="email" placeholder="Email" required>
+                    <label for="contactEmail" class="visually-hidden">Your Email</label>
+                    <input type="email" id="contactEmail" name="email" placeholder="Email" required aria-required="true">
                 </div>
                 <div class="form-group">
-                    <textarea name="message" placeholder="Message" rows="5" required></textarea>
+                    <label for="contactMessage" class="visually-hidden">Your Message</label>
+                    <textarea id="contactMessage" name="message" placeholder="Message" rows="5" required aria-required="true"></textarea>
                 </div>
                 <input type="hidden" name="access_key" value="7fb726e8-1b0d-4a9e-98f3-8715a1cf9ce8">
-                <div id="formStatus" class="form-status"></div>
-                <button type="submit" class="cta-button">
+                <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+                <button type="submit" class="cta-button" aria-label="Send contact message">
                     <span>Send Message</span>
                 </button>
             </form>
@@ -235,7 +400,13 @@
 
     <footer>
         <p>&copy; <span id="currentYear"></span> Eliot Hiss. All rights reserved.</p>
+        <a href="colophon.html" class="colophon-link">Colophon</a>
     </footer>
+
+    <!-- Lightbox overlay -->
+    <div id="lightbox" class="lightbox hidden" aria-modal="true" role="dialog">
+        <img id="lightboxImage" alt="Expanded view" />
+    </div>
 
     <script src="script.js"></script>
 </body>

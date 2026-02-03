@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- Home -->
+  <url>
+    <loc>https://eliothiss.com/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- About -->
+  <url>
+    <loc>https://eliothiss.com/#about</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Experience -->
+  <url>
+    <loc>https://eliothiss.com/#experience</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Eagle Scout -->
+  <url>
+    <loc>https://eliothiss.com/#eagle-scout</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Projects -->
+  <url>
+    <loc>https://eliothiss.com/#projects</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Education -->
+  <url>
+    <loc>https://eliothiss.com/#education</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://eliothiss.com/#contact</loc>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>
